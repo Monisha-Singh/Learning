@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>Demo_10003_SevletConfig_ServletContext</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>ServletConfigDemo</display-name>
+    <servlet-name>ServletConfigDemo</servlet-name>
+    <servlet-class>com.accenture.lkm.ServletConfigDemo</servlet-class>
+    
+    <!-- declaring config parameter -->
+    <init-param>
+    	<param-name>config_param</param-name>
+    	<param-value>100</param-value>
+    </init-param>
+   </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>ServletConfigDemo</servlet-name>
+    <url-pattern>/ServletConfigDemo</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <description></description>
+    <display-name>ServletContextDemo</display-name>
+    <servlet-name>ServletContextDemo</servlet-name>
+    <servlet-class>com.accenture.lkm.ServletContextDemo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletContextDemo</servlet-name>
+    <url-pattern>/ServletContextDemo</url-pattern>
+  </servlet-mapping>
+  
+  
+    
+  <!--  decaring context paarameter -->
+  
+  <context-param>
+  	<param-name>context_param</param-name>
+    <param-value>200</param-value>
+  </context-param>
+  
+  <servlet>
+    <description></description>
+    <display-name>TestServlet</display-name>
+    <servlet-name>TestServlet</servlet-name>
+    <servlet-class>com.accenture.lkm.TestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TestServlet</servlet-name>
+    <url-pattern>/TestServlet</url-pattern>
+  </servlet-mapping>
+  
+    
+</web-app>
